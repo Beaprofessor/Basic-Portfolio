@@ -37,6 +37,7 @@ h6 {
 nav {
     font-size: 80%;
     padding: 1rem;
+    background-color: var(--beckett);
 }
 
 nav ul {
@@ -44,9 +45,11 @@ nav ul {
     padding: 0;
     margin: 0;
     display: flex;
+    flex-flow: row wrap;
     justify-content: center;
     align-items: center;
     gap: 2rem;
+    margin-right: 2rem;
 }
 
 nav a {
@@ -56,19 +59,32 @@ nav a {
 }
 
 nav a:hover {
-    color: rgb(85, 139, 135);
+    color: beige;
     text-decoration: underline;
     font-size: 1.2rem;
 }
 
 nav li:first-child {
-    flex-grow: 1;
+    /* flex-grow: 1;    We will write media query to bring this back */
+    flex-basis: 100%;
     font-size: 1.5rem;
+    margin-left: 4.5rem;
+}
 
+.button {
+    background-color: rgb(85, 139, 135);
+    padding: 0.5rem;
+    border-radius: 5px;
+}
+
+.button:hover {
+    background: linear-gradient(to right top, #8fe16a, #dec753, #ffac71, #ff9da2, #eba0ca);
 }
 
 #intro {
-    padding: 5rem;
+    padding: 4rem 1rem 5rem 1rem;
+    max-width: 1450px;
+    margin: 0 auto;
 }
 
 #intro p {
@@ -84,7 +100,12 @@ nav li:first-child {
 }
 
 .profile {
-    padding-bottom: 1rem;
+    padding-bottom: 0.7rem;
+    margin-bottom: 1.4rem;
+}
+
+.profile span {
+    font-size: 1.1rem;
 }
 
 #intro h2 {
@@ -92,11 +113,40 @@ nav li:first-child {
     font-weight: normal;
 }
 
+#experience-header {
+    font-size: 3rem;
+    margin: 0 auto;
+    width: 200px;
+    padding: 1rem;
+}
+
+.myPicture {
+    max-height: 550px;
+    max-width: 500px;
+}
+
+.myPicture img {
+    margin: 1rem 0;
+    width: 100%;
+    border-radius: 5px;
+}
+
+#experience {
+    display: flex;
+    /* height: 300px; */
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+
 #experience ul {
     margin: 0;
-    padding: 5rem;
-    font-size: 1.2rem;
-
+    padding: 5px;
+    font-size: 1.4rem;
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: var(--beckett);
 }
 
 #experience li {
@@ -116,10 +166,34 @@ nav li:first-child {
     padding: 2.5rem 0;
 }
 
+#hire h2 {
+    font-size: 3rem;
+}
+
 #hire p {
+    font-size: 1.2rem;
     margin-top: 2rem;
 }
 
 .section-hire {
     background-color: var(--beckett);
+}
+
+.gradient-section {
+    height: 5px;
+    background: linear-gradient(to right top, #8fe16a, #dec753, #ffac71, #ff9da2, #eba0ca);
+}
+
+
+footer {
+    text-align: center;
+    padding: 2rem 0;
+}
+
+@media (min-width: 768px) {
+    nav li:first-child {
+        flex-grow: 1;
+        flex-basis: auto;
+    }
+
 }
