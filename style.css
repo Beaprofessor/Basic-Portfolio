@@ -1,0 +1,125 @@
+:root {
+    /* -- iss hyphen hyphen se apan ek variable create kar rhe hai and iss variable ko fir apan use kar sakte hai as a CSS variable */
+
+    --beckett: #86A69D;
+    --autumn: #F2B263;
+    --gardenia: #F2E8DF;
+    --snowpink: #F2C6C2;
+    --salmon: #F28585;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    color: black;
+    background-color: beige;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+nav {
+    font-size: 80%;
+    padding: 1rem;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+nav a {
+    color: black;
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: rgb(85, 139, 135);
+    text-decoration: underline;
+    font-size: 1.2rem;
+}
+
+nav li:first-child {
+    flex-grow: 1;
+    font-size: 1.5rem;
+
+}
+
+#intro {
+    padding: 5rem;
+}
+
+#intro p {
+    font-size: 1.5rem;
+    line-height: 1.5;
+}
+
+.name span {
+    display: block;
+    color: rgb(85, 139, 135);
+    font-size: 4rem;
+
+}
+
+.profile {
+    padding-bottom: 1rem;
+}
+
+#intro h2 {
+    font-size: 3rem;
+    font-weight: normal;
+}
+
+#experience ul {
+    margin: 0;
+    padding: 5rem;
+    font-size: 1.2rem;
+
+}
+
+#experience li {
+    list-style-type: none;
+    padding: 1rem;
+}
+
+#expereience a {
+    color: black;
+}
+
+#hire {
+    background-color: var(--beckett);
+    width: 400px;
+    text-align: center;
+    margin: 0 auto;
+    padding: 2.5rem 0;
+}
+
+#hire p {
+    margin-top: 2rem;
+}
+
+.section-hire {
+    background-color: var(--beckett);
+}
